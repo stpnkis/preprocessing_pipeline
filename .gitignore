@@ -1,0 +1,49 @@
+# Virtual environments
+.venv/
+venv/
+env/
+.env/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Generated outputs
+output/
+out/
+
+# Profile runtime artefacts (generated during teach-in / preview)
+profiles/*/debug/
+profiles/*/preview/
+profiles/*/reference.png
+profiles/*/reference_features.npz
+
+# Datasets (never version)
+dataset/
+datasets/
+data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Audit / internal reports
+AUDIT_REPORT.md

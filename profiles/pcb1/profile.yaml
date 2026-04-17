@@ -1,0 +1,81 @@
+product_id: pcb1
+teachin_mode: reviewed
+finalized: true
+dataset_source: /path/to/your/dataset/Normal
+teachin_images:
+- 0000.JPG
+- 0083.JPG
+- 0166.JPG
+- 0249.JPG
+- 0332.JPG
+- 0415.JPG
+- 0498.JPG
+- 0581.JPG
+- 0664.JPG
+- 0747.JPG
+- 0830.JPG
+- 0913.JPG
+primary_reference: 0498.JPG
+reference_image: reference.png
+reference_features: reference_features.npz
+reference_size:
+- 1404
+- 1070
+canonical_size:
+- 1264
+- 964
+regions:
+  canonical_crop:
+  - 70
+  - 53
+  - 1264
+  - 964
+  similarity_roi:
+  - 120
+  - 103
+  - 1164
+  - 864
+  object_mask: null
+feature_detector: akaze
+feature_params:
+  akaze:
+    descriptor_type: 5
+    threshold: 0.0003
+  orb:
+    nfeatures: 5000
+    scale_factor: 1.2
+    nlevels: 8
+matching:
+  ratio_threshold: 0.75
+  min_matches: 15
+ransac:
+  reproj_threshold: 5.0
+  max_iters: 5000
+  confidence: 0.999
+ecc:
+  enabled: true
+  motion_type: euclidean
+  max_iterations: 200
+  epsilon: 1.0e-05
+  gaussian_filter_size: 5
+orientation:
+  check_180: true
+quality_gates:
+  min_inlier_count: 10
+  min_inlier_ratio: 0.15
+  min_similarity_score: 0.3
+  max_warp_area_ratio: 10.0
+  min_warp_area_ratio: 0.1
+output:
+  save_debug: true
+  image_format: png
+updated: '2026-04-16T14:52:56.825373'
+teachin_stats:
+  num_teachin_images: 12
+  num_aligned: 12
+  mean_inliers: 373.5
+  min_inliers: 202
+  max_inliers: 646
+  mean_similarity: 0.727
+  min_similarity: 0.6256
+  max_similarity: 0.8326
